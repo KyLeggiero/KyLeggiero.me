@@ -1,0 +1,56 @@
+<meta charset="utf-8" />
+<meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
+<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+<title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+
+{% if page.excerpt %}
+<meta name="description" content="{{ page.excerpt| strip_html }}" />
+<meta property="og:description" content="{{ page.excerpt| strip_html }}" />
+<meta name="twitter:description" content="{{ page.excerpt| strip_html }}" />
+{% else %}
+<meta name="description" content="{{ site.description }}">
+<meta property="og:description" content="{{ site.description }}" />
+<meta name="twitter:description" content="{{ site.description }}" />
+{% endif %}
+<meta property="og:site_name"                      content="{{ site.name }}" />
+<meta property="twitter:site"                      content="{{ site.name }}" />
+{% if site.social.twitter %}
+<meta name="twitter:creator"                       content="@{{ site.social.twitter }}" /><!-- Tell twitter that this was made by Ben Leggiero -->
+{% endif %}
+<meta property="og:type"                           content="{% if page.type %}{{ page.type }}{% else %}profile{% endif %}" />
+<meta name="author" content="{{ site.author }}" />
+<meta property="profile:first_name"                content="Ben" />
+<meta property="profile:last_name"                 content="Leggiero" />
+<meta property="profile:username"                  content="BenLeggiero" />
+<meta name="twitter:card"                          content="summary_large_image" /><!-- Tell twitter that this link can be presented as a large image with a summary -->
+{% if site.theme-color %}
+<meta name="msapplication-TileColor"               content="{{ site.theme-color }}" /><!-- When pinned as a tile for Windows' Start, this is the tile's BG color -->
+<meta name="theme-color"                           content="{{ site.theme-color }}"/><!-- Color in Chrome address bar -->
+<meta name="apple-mobile-web-app-status-bar-style" content="{{ site.theme-color }}" /><!-- Color in Safari status bar -->
+{% endif %}
+<meta name="msapplication-TileImage"               content="https://Shared.BHStudios.org/_img/brand/paw_2.2.1_(512).png" /><!-- When pinned as a tile for Windows' Start, this is the image -->
+<meta property="og:image"                          content="/_img/Social-Preview.png" /><!-- Image for sharing on social networks -->
+<meta property="twitter:image"                     content="/_img/Social-Preview.png" />
+<meta name="twitter:image:src"                     content="/_img/Social-Preview.png" />
+<meta property="article:published_time"            content="2019-03-23" />
+<meta property="article:modified_time"             content="2019-04-28" /> <!-- Also update the Last Updated date in the footer -->
+
+
+{% if page.title %}
+<meta property="og:title" content="{{ page.title }} – {{ site.name }}" />
+<meta property="twitter:title" content="{{ page.title }} – {{ site.name }}" />
+{% else %}
+<meta property="og:title" content="{{ site.name }}" />
+<meta property="twitter:title" content="{{ site.name }}" />
+{% endif %}
+
+{% if site.social.twitter %}
+<link href="https://twitter.com/{{ site.social.twitter }}" rel="me" />
+{% endif %}
+{% if site.social.microblog %}
+<link href="https://micro.blog/{{ site.social.microblog }}" rel="me" />
+{% endif %}
+{% if site.social.mastodon %}
+<link href="https://{{ site.social.mastodon.instance }}/@{{ site.social.mastodon.username }}" rel="me" />
+{% endif %}

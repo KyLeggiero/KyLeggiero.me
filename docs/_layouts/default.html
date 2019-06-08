@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="brightness-dark">
+<head>
+{% include header-meta.html %}
+
+{% include header-stylesheets.html %}
+
+{% comment %}{% include header-scripts.html %}{% endcomment %}
+
+
+
+<!-- See also the git repository at https://GitHub.com/BenLeggiero/BenLeggiero.me -->
+</head>
+
+<body>
+    <header class="app-bar gradient-background">
+        <a href="#" class="flat button show-sidebar-button"><i class="material-icons">menu</i></a>
+        <a href="/" class="flat button   back-to-root-link"><h1 class="title"><span class="title-text">{{ site.title }}</span><span class="subtitle-text"></span></h1></a>
+        <span class="layout-placeholder"></span>
+    </header>
+
+    <main id="main" role="main" class="container">
+        {{ content }}
+    </main>
+
+    <div class="wrapper-footer">
+        <div class="container">
+            <footer class="footer">
+                {% include svg-icons.html %}
+            </footer>
+        </div>
+    </div>
+
+    <nav class="sidebar">
+        oh hi
+    </nav>
+
+    {% include analytics.html %}
+</body>
+</html>
