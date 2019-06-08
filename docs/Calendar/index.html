@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="material brightness-dark not-top-level reduce-motion" lang="en-US">
+<html class="material brightness-dark not-top-level" lang="en-US">
 <head>
 <meta http-equiv="Content-Type"    content="text/html; charset=utf-8" /> <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
@@ -70,7 +70,13 @@
 
 
 <style>
-
+iframe#calendar {
+    padding: 1em;
+    background: #FFF;
+    border-radius: 1em;
+    box-shadow: var(--box-shadow-z12);
+    margin: 0 2em 2em;
+}
 </style>
 </head>
 
@@ -78,14 +84,14 @@
 
 <body>
     <header class="app-bar gradient-background">
-        <a href="/" class="button back-to-root-link"><i class="material-icons    back-to-root-icon   invisible">arrow_back</i> <h1 class="title"><span class="title-text">Ben Leggiero</span><span class="subtitle-text"></span></h1></a>
+        <a href="/" class="button back-to-root-link"><i class="material-icons    back-to-root-icon   invisible">arrow_back</i></a> <h1 class="title"><span class="title-text">Ben Leggiero's Calendar</span></h1>
     </header>
 
 
 
     <main>
-        <section>
-            <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;ctz=America%2FDenver&amp;src=YmVubGVnZ2llcm9AZ21haWwuY29t&amp;src=OHJyMzI3ODllZjMzZDZnNjBmMmMwc3NsazRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=MGpsMWRhNGoycDBnMWMxcTJtNmo3NGdoZTBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=amp1Ym9rZDVmb2hiZW9mMXE4a2tlYzFxOWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ajNpdnJnaWRqMGFzaGs4ZjEzcTRtMDcyMzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%233F51B5&amp;color=%23039BE5&amp;color=%23E67C73&amp;color=%230B8043&amp;color=%23D50000&amp;color=%237CB342&amp;showTz=1&amp;showTitle=0&amp;title=Ben%20Leggiero&#39;s%20Calendar&amp;showNav=1&amp;showDate=1&amp;showCalendars=1" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        <section class="flex-column flex-horiz-center">
+            <iframe id="calendar" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;ctz=America%2FDenver&amp;src=YmVubGVnZ2llcm9AZ21haWwuY29t&amp;src=OHJyMzI3ODllZjMzZDZnNjBmMmMwc3NsazRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=MGpsMWRhNGoycDBnMWMxcTJtNmo3NGdoZTBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=amp1Ym9rZDVmb2hiZW9mMXE4a2tlYzFxOWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ajNpdnJnaWRqMGFzaGs4ZjEzcTRtMDcyMzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%233F51B5&amp;color=%23039BE5&amp;color=%23E67C73&amp;color=%230B8043&amp;color=%23D50000&amp;color=%237CB342&amp;showTz=1&amp;showTitle=0&amp;title=Ben%20Leggiero&#39;s%20Calendar&amp;showNav=1&amp;showDate=1&amp;showCalendars=1" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
         </section>
     </main>
 
@@ -98,7 +104,7 @@
 
         <aside class="text-center">
             <!-- also update article:modified_time meta -->
-            Last updated <time datetime="2019-04-28">2019-05-28</time>
+            Last updated <time datetime="2019-04-28">2019-06-08</time>
         </aside>
     </footer>
 </body>
