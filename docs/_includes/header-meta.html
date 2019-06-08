@@ -30,11 +30,15 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="{{ site.theme-color }}" /><!-- Color in Safari status bar -->
 {% endif %}
 <meta name="msapplication-TileImage"               content="https://Shared.BHStudios.org/_img/brand/paw_2.2.1_(512).png" /><!-- When pinned as a tile for Windows' Start, this is the image -->
-<meta property="og:image"                          content="/_img/Social-Preview.png" /><!-- Image for sharing on social networks -->
-<meta property="twitter:image"                     content="/_img/Social-Preview.png" />
-<meta name="twitter:image:src"                     content="/_img/Social-Preview.png" />
-<meta property="article:published_time"            content="2019-03-23" />
-<meta property="article:modified_time"             content="2019-04-28" /> <!-- Also update the Last Updated date in the footer -->
+<meta property="og:image"                          content="/images/Social-Preview.png" /><!-- Image for sharing on social networks -->
+<meta property="twitter:image"                     content="/images/Social-Preview.png" />
+<meta name="twitter:image:src"                     content="/images/Social-Preview.png" />
+{% if page.date.published %}
+<meta property="article:published_time"            content="{{ page.date.published }}" />
+{% endif %}
+{% if page.date.modified %}
+<meta property="article:modified_time"             content="{{ page.date.modified }}" />
+{% endif %}
 
 
 {% if page.title %}
