@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="brightness-dark">
+<head>
+{% include header-meta.html %}
+
+{% include header-stylesheets.html %}
+
+{% comment %}{% include header-scripts.html %}{% endcomment %}
+
+
+
+<!-- See also the git repository at https://GitHub.com/BenLeggiero/BenLeggiero.me -->
+</head>
+
+<body>
+<header class="app-bar gradient-background">
+    {% unless page.no-back-button %}<a href="/" class="button back-to-root-link"><i class="material-icons    back-to-root-icon   invisible">arrow_back</i></a> {% endunless %}<h1 class="title"><span class="title-text">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</span></h1>
+</header>
+
+<main id="main" role="main" class="container">
+    {{ content }}
+</main>
+
+
+
+<footer class="centered  widest-desktop-small">
+    <section class="show-print text-centered">
+        {{ site.url }}{{ page.url }}
+    </section>
+
+    <aside class="text-center">
+        {% if page.date.modified %}
+        Last updated <time datetime="{{ page.date.modified }}">{{ page.date.modified }}</time>
+        {% elsif page.date.published %}
+        As of <time datetime="{{ page.date.published }}">{{ page.date.published }}</time>
+        {% endif %}
+    </aside>
+</footer>
+
+<nav class="sidebar">
+    oh hi
+</nav>
+
+{% include analytics.html %}
+</body>
+</html>

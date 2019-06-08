@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<article class="post">
+{{ content }}
+
+<footer>
+    <ol class="tags   plain   flex-row flex-wrap flex-horiz-center flex-vert-center">
+        {% for tag in page.categories %}
+        <li><span class="tag" data-tag-name="{{ tag }}">{{ tag }}</span></li>
+        {% endfor %}
+    </ol>
+</footer>
+
+<footer class="flex-row flex-horiz-space-between flex-vert-bottom flex-wrap">
+    <ol class="dates-and-times">
+        <li>
+            <time class="date" datetime="{{ page.date | date_to_xmlschema }}">
+                {% if page.date-migrated or page.date-edit %}Originally posted{% else %}Posted{% endif %} {{ page.date | date: "%F (a %A) at %R %Z" }}
+            </time>
+        </li>
+        {% if page.date-migrated %}
+        <li>
+            <time class="date" datetime="{{ page.date-migrated | date_to_xmlschema }}">
+                Migrated {{ page.date-migrated | date: "%F (a %A) at %R %Z" }}
+            </time>
+        </li>
+        {% endif %}
+        {% if page.date-edit %}
+        <li>
+            <time class="date" datetime="{{ page.date-edit | date_to_xmlschema }}">
+                Updated {{ page.date-edit | date: "%F (a %A) at %R %Z" }}
+            </time>
+        </li>
+        {% endif %}
+    </ol>
+
+    <ol class="plain inline-list">
+        {% if page.original-url %}
+        <li><a href="{{ page.original-url }}" title="View Original" target="_blank" class="small material-icons button">import_contacts</a></li>
+        {% endif %}
+        <li><a href="https://github.com/BenLeggiero/blog/commits/master/{{ page.path }}" title="Post History" target="_blank" class="small material-icons button">history</a></li>
+        <li><a href="https://github.com/BenLeggiero/blog/edit/master/{{ page.path }}" title="Suggest an Edit" target="_blank" class="small material-icons button">edit</a></li>
+    </ol>
+</footer>
+</article>
+
+{% include disqus.html %}
