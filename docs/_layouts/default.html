@@ -25,11 +25,10 @@
 
 <footer class="centered  widest-desktop-small">
     <section class="show-print text-centered">
-        {{ page.url }}
+        {{ site.url }}{{ page.url }}
     </section>
 
     <aside class="text-center">
-        <!-- also update article:modified_time meta -->
         {% if page.date.modified %}
         Last updated <time datetime="{{ page.date.modified }}">{{ page.date.modified }}</time>
         {% elsif page.date.published %}
