@@ -24,7 +24,7 @@ avatar: https://www.gravatar.com/avatar/2f4691f7a1c9d3192fe843a164a27535?s=140px
 social:
     default-username: BenLeggiero
     email: BenLeggiero@Gmail.com
-    github: BenLeggiero/blog
+    github: BenLeggiero/BenLeggiero.me
     twitter: BenLeggiero
     stackoverflow: users/3939277/ben-leggiero
     mastodon:
@@ -81,6 +81,10 @@ plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
 #  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
   - jekyll-archives
+  - jekyll-redirect-from
+
+whitelist:
+  - jekyll-redirect-from
 
 # Exclude these files from your production _site
 exclude:

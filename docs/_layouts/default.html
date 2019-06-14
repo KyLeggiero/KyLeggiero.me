@@ -14,7 +14,9 @@
 
 <body>
 <header class="app-bar gradient-background">
-    {% unless page.no-back-button %}<a href="/" class="button back-to-root-link"><i class="material-icons    back-to-root-icon   invisible">arrow_back</i></a> {% endunless %}<h1 class="title"><span class="title-text">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</span></h1>
+    {% unless page.no-back-button %}<a href="/" class="button back-to-root-link"><i class="material-icons    back-to-root-icon">arrow_back</i></a>
+    {% endunless %}<h1 class="title"><span class="title-text">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</span></h1>{% if site.github %}
+    <a href="https://GitHub.com/{{ site.social.github }}" class="button back-to-root-link"><i class="fab fa-github fa-2x"></i></a>{% endif %}
 </header>
 
 <main id="main" role="main" class="container">
@@ -30,9 +32,9 @@
 
     <aside class="text-center">
         {% if page.date.modified %}
-        Last updated <time datetime="{{ page.date.modified }}">{{ page.date.modified }}</time>
+        Last tweaked <time datetime="{{ page.date.modified }}">{{ page.date.modified }}</time>
         {% elsif page.date.published %}
-        As of <time datetime="{{ page.date.published }}">{{ page.date.published }}</time>
+        Created <time datetime="{{ page.date.published }}">{{ page.date.published }}</time>
         {% endif %}
     </aside>
 </footer>
