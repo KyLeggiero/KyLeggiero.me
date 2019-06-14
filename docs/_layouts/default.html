@@ -32,9 +32,9 @@
 
     <aside class="text-center">
         {% if page.date.modified %}
-        Last updated <time datetime="{{ page.date.modified }}">{{ page.date.modified }}</time>
+        Last tweaked <time datetime="{{ page.date.modified }}">{{ page.date.modified }}</time>
         {% elsif page.date.published %}
-        As of <time datetime="{{ page.date.published }}">{{ page.date.published }}</time>
+        Created <time datetime="{{ page.date.published }}">{{ page.date.published }}</time>
         {% endif %}
     </aside>
 </footer>
