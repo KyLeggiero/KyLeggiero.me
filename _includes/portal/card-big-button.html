@@ -1,0 +1,22 @@
+            <li>
+                <a href="{{ include.url }}" target="_blank" class="figure-card   big low-emphasis button">
+                    <figure>
+                        {%- if include.thumbnailUrl-light %}
+                        <img src="{{ include.thumbnailUrl-light }}" class="figure-card-thumbnail" data-target-theme="light" />
+                        <img src="{{ include.thumbnailUrl-dark | default: include.thumbnailUrl }}" class="figure-card-thumbnail" data-target-theme="dark" />
+                        {%- elsif include.thumbnailUrl-dark %}
+                        <img src="{{ include.thumbnailUrl }}" class="figure-card-thumbnail" data-target-theme="light" />
+                        <img src="{{ include.thumbnailUrl-dark }}" class="figure-card-thumbnail" data-target-theme="dark" />
+                        {%- else %}
+                        <img src="{{ include.thumbnailUrl }}" class="figure-card-thumbnail" />
+                        {%- endif %}
+
+                        <figcaption class="figure-card-text">
+                            <h2 class="figure-card-title">{{ include.title }}</h2>
+                            {%- if include.description %}
+                            <p class="figure-card-description">{{ include.description }}</p>
+                            {%- endif %}
+                        </figcaption>
+                    </figure>
+                </a>
+            </li>

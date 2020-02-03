@@ -1,0 +1,17 @@
+            <li>
+                <figure class="card">
+                    <figcaption>
+                        <h3>{{ include.title }}</h3>
+                        {% if include.note -%}
+                        <aside>{{ include.note }}</aside>
+                        {%- endif %}
+                    </figcaption>
+
+                    <a href="{{ include.url }}" target="_blank" class="big button low-emphasis">
+                        {%- if include.fontAwesomeIcon -%}
+                        <i class="{{ include.fontAwesomeIcon }}"></i>
+                        {%- elsif include.materialIcon -%}
+                        <i class="material-icons">{{ include.materialIcon }}</i>
+                        {%- endif %} <span>{{ include.display }}</span></a>
+                </figure>
+            </li>

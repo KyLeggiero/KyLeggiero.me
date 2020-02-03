@@ -5,4 +5,73 @@ app-bar:
     trailing-control:
         kind: 'link'
         target: 'github'
+
+portal:
+    sections:
+        -
+            items:
+                -
+                    style: card
+                    title: Résumé
+                    description: My résumé which I keep up-to-date. It's even mobile-friendly!
+                    url: https://Resume.BenLeggiero.me
+                    thumbnailUrl: https://resume.benleggiero.me/img/Social-Preview.png
+                -
+                    style: card
+                    title: Calendar
+                    description: My calendar which is always accurate
+                    url: /Calendar
+                    thumbnailUrl-light: /images/Portal-Thumbnails/Calendar/Light Mode.svg
+                    thumbnailUrl-dark: /images/Portal-Thumbnails/Calendar/Dark Mode.svg
+                -
+                    style: card
+                    title: Blog
+                    description: My blog, where I post thoughts and ideas too complex for a tweet
+                    url: https://BenLeggiero.blog
+                    thumbnailUrl-light: /images/Portal-Thumbnails/Blog/Light Mode.svg
+                    thumbnailUrl-dark: /images/Portal-Thumbnails/Blog/Dark Mode.svg
+        -
+            title: Social
+            id: Social
+            items:
+                -
+                    style: mediumEmphasisButton
+                    title: Mastodon
+                    url: https://Mastodon.Social/@BenLeggiero
+                    fontAwesomeIcon: fab fa-mastodon
+                -
+                    style: mediumEmphasisButton
+                    title: Twitter
+                    url: https://Twitter.com/BenLeggiero
+                    fontAwesomeIcon: fab fa-twitter
+                -
+                    style: mediumEmphasisButton
+                    title: LinkedIn
+                    url: https://LinkedIn.com/in/ben-leggiero
+                    fontAwesomeIcon: fab fa-linkedin
+        -
+            title: Contact
+            id: Contact
+            items:
+                -
+                    style: titledLink
+                    title: eMail
+                    note: Feel free to send me eMails!
+                    display: BenLeggiero@Gmail.com
+                    url: mailto:BenLeggiero@Gmail.com
+                    materialIcon: email
+                -
+                    style: titledLink
+                    title: Phone Number
+                    note: Only call me if it's time-sensitive; otherwise I prefer eMail
+                    display: +1 (470) BEN C LEG <small>(236-2534)</small>
+                    url: tel:14702362534
+                    materialIcon: phone
+                -
+                    style: titledLink
+                    title: Telegram
+                    note: Feel free to chat with me on Telegram!
+                    display: "@BenLeggiero"
+                    url: https://t.me/BenLeggiero
+                    fontAwesomeIcon: fab fa-telegram-plane
 ---

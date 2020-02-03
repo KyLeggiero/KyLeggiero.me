@@ -1,0 +1,8 @@
+            <li>
+                <a href="{{ include.url }}" target="_blank" class="button medium-emphasis">
+                    {%- if include.fontAwesomeIcon -%}
+                    <i class="{{ include.fontAwesomeIcon }}"></i>
+                    {%- elsif include.materialIcon -%}
+                    <i class="material-icons">{{ include.materialIcon }}</i>
+                    {%- endif %} <span>{{ include.title }}</span></a>
+            </li>
