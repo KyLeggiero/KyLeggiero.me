@@ -7,7 +7,7 @@
                         {%- endif %}
                     </figcaption>
 
-                    <a href="{{ include.url }}" target="_blank" class="big button low-emphasis">
+                    <a href="{{ include.url }}" {%- if include.openNewTab | default: true %} target="_blank" {%- endif %} class="big button low-emphasis">
                         {%- if include.fontAwesomeIcon -%}
                         <i class="{{ include.fontAwesomeIcon }}"></i>
                         {%- elsif include.materialIcon -%}

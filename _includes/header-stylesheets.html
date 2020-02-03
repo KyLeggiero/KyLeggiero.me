@@ -6,3 +6,6 @@
 <link rel="stylesheet" type="text/css" id="material-icons"       href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 <link rel="stylesheet" type="text/css" id="google-fonts"         href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700|Bangers|Carter+One|Gugi|Nova+Square|Questrial|Squada+One|ZCOOL+QingKe+HuangYou|Economica:400i|Medula+One|Teko:300,400&amp;subset=chinese-simplified,korean,latin-ext,vietnamese,cyrillic,cyrillic-ext,greek,greek-ext">
 <link rel="stylesheet" type="text/css" id="site-styles"          href="{{ site.baseurl }}/site.css" />
+{%- for stylesheet in page.page-specific-stylesheets %}
+<link rel="stylesheet" type="text/css"                           href="{{ stylesheet }}" />
+{%- endfor %}

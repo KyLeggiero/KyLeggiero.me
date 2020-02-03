@@ -28,11 +28,14 @@
 </head>
 
 <body>
-<header class="app-bar gradient-background">
-    {% unless page.nav-button-kind == 'back' -%}
+<header class="app-bar">
+    {% if page.nav-button-kind == 'back' -%}
+    <a href="/" class="flat button   back-to-root-link">{% if page.nav-button-kind == 'back' %}<i class="material-icons    back-to-root-icon">arrow_back</i>{% endif %}</a>
+    <h1 class="title"><span class="title-text">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</span></h1>
+    {%- else -%}
     <a href="#" class="flat button show-sidebar-button" onclick="return false;"><i class="material-icons">menu</i></a>
-    {%- endunless -%}
-    <a href="/" class="flat button   back-to-root-link">{% if page.nav-button-kind == 'back' %}<i class="material-icons    back-to-root-icon">arrow_back</i>{% endif %}<h1 class="title"><span class="title-text">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</span></h1></a>
+    <a href="/" class="flat button   back-to-root-link"><h1 class="title"><span class="title-text">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</span></h1></a>
+    {%- endif %}
 
     {%- if page.app-bar.trailing-control.kind == 'link' %}
     <a href="{{ app-bar-trailing-control-url }}" class="button back-to-root-link">{{ app-bar-trailing-control-icon }}</a>

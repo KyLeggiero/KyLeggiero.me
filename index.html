@@ -5,6 +5,8 @@ app-bar:
     trailing-control:
         kind: 'link'
         target: 'github'
+page-specific-stylesheets:
+    - portal.css
 
 portal:
     sections:
@@ -23,6 +25,7 @@ portal:
                     url: /Calendar
                     thumbnailUrl-light: /images/Portal-Thumbnails/Calendar/Light Mode.svg
                     thumbnailUrl-dark: /images/Portal-Thumbnails/Calendar/Dark Mode.svg
+                    openNewTab: false
                 -
                     style: card
                     title: Blog
@@ -63,8 +66,8 @@ portal:
                 -
                     style: titledLink
                     title: Phone Number
-                    note: Only call me if it's time-sensitive; otherwise I prefer eMail
-                    display: +1 (470) BEN C LEG <small>(236-2534)</small>
+                    note: Only call me if it's time-sensitive;<br/>otherwise I prefer eMail or Telegram
+                    display: +1 (470) BEN C LEG <small class="inline-block">(236-2534)</small>
                     url: tel:14702362534
                     materialIcon: phone
                 -

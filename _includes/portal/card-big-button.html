@@ -1,5 +1,5 @@
             <li>
-                <a href="{{ include.url }}" target="_blank" class="figure-card   big low-emphasis button">
+                <a href="{{ include.url }}" {%- if include.openNewTab | default: true %} target="_blank" {%- endif %} class="figure-card   big low-emphasis button">
                     <figure>
                         {%- if include.thumbnailUrl-light %}
                         <img src="{{ include.thumbnailUrl-light }}" class="figure-card-thumbnail" data-target-theme="light" />
