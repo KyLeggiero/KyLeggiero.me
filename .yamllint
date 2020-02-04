@@ -1,0 +1,8 @@
+extends: relaxed
+
+rules:
+    document-start: disabled
+    line-length:
+        max: 120
+    empty-lines:
+        max: 3

@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+<nav class="portal">
+    {% for portalSection in page.portal.sections %}
+    <section {%- if portalSection.id %} id="{{ portalSection.id }}" {%- endif %}>
+        {%- if portalSection.title %}
+        <h1>{{ portalSection.title }}</h1>
+        {% endif %}
+        <ol class="figure-cards   flex-row flex-wrap flex-horiz-space-around">
+            {%- for portalItem in portalSection.items %}
+            {%- case portalItem.style | default: 'card' %}
+                {%- when 'card' %}
+                    {%- include portal/card-big-button.html
+                        title=portalItem.title
+                        description=portalItem.description
+                        url=portalItem.url
+                        thumbnailUrl=portalItem.thumbnailUrl
+                        thumbnailUrl-light=portalItem.thumbnailUrl-light
+                        thumbnailUrl-dark=portalItem.thumbnailUrl-dark
+                        openNewTab=portalItem.openNewTab
+                    %}
+
+                {%- when 'mediumEmphasisButton' %}
+                    {%- include portal/medium-emphasis-button.html
+                        title=portalItem.title
+                        url=portalItem.url
+                        fontAwesomeIcon=portalItem.fontAwesomeIcon
+                        materialIcon=portalItem.materialIcon
+                        openNewTab=portalItem.openNewTab
+                    %}
+
+                {%- when 'titledLink' %}
+                    {%- include portal/titled-link.html
+                        title=portalItem.title
+                        url=portalItem.url
+                        display=portalItem.display
+                        note=portalItem.note
+                        fontAwesomeIcon=portalItem.fontAwesomeIcon
+                        materialIcon=portalItem.materialIcon
+                        openNewTab=portalItem.openNewTab
+                    %}
+
+                {%- else %}
+                    Unknown portal item style: {{ portalItem.style }}
+            {%- endcase %}
+            {%- endfor %}
+        </ol>
+    </section>
+    {% endfor %}
+</nav>
+
+{{ content }}

@@ -1,0 +1,11 @@
+---
+---
+
+.app-bar {
+    --font-family-title: "Questrial", "Roboto", var(--font-family-primary, sans-serif), sans-serif;
+    --font-size-title: 2em;
+
+    .button .title {
+        text-transform: none;
+    }
+}

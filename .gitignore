@@ -1,8 +1,8 @@
 
 \.DS_Store
 
-docs/_site/
+_site/
 
-docs/Gemfile\.lock
+Gemfile.lock
 
-docs/\.jekyll-metadata
+.jekyll-metadata

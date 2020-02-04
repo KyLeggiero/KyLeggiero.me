@@ -1,0 +1,98 @@
+{%- comment -%}
+
+The bit of Liquid below is meant to be a way to simplify what icon goes in the top-right of the app bar. So far I've
+just got GitHub, but since I'd like to push this as a generalized component, I figured I should think of a generalized
+solution that'll work going forward.
+
+{%- endcomment -%}
+{%- if page.app-bar.trailing-control.target -%}
+    {%- capture app-bar-trailing-control-url -%}
+        {%- case page.app-bar.trailing-control.target -%}
+            {%- when 'github' -%}
+                https://GitHub.com/{{ site.social.github }}
+        {%- endcase -%}
+    {%- endcapture -%}
+
+    {%- capture app-bar-trailing-control-icon -%}
+        {%- case page.app-bar.trailing-control.target -%}
+            {%- when 'github' -%}
+                <i class="fab fa-github fa-2x"></i>
+        {%- endcase -%}
+    {%- endcapture -%}
+{%- endif -%}
+
+
+
+<!--
+
+👋🏼 Hey, there! Thanks for checking out the code!
+I wrote this site to help others learn about me, schedule stuff with me, and contact me.
+
+If you want to browse through all the current source code or see the history, head over to
+https://GitHub.com/BenLeggiero/BenLeggiero.me
+
+Since I wrote all this code from scratch, I decided to place it under the BH-1-PS license:
+https://github.com/BlueHuskyStudios/Licenses/blob/master/Licenses/BH-1-PS.txt
+Feel free to take this code and use it for your own stuff! Just make sure you let everyone know I wrote the original 😉
+
+-->
+<!DOCTYPE html>
+<html class="brightness-dark">
+<head>
+{% include header-meta.html %}
+
+{% include header-stylesheets.html %}
+
+{% include header-scripts.html %}
+<!-- See also the git repository at https://GitHub.com/BenLeggiero/BenLeggiero.me -->
+</head>
+
+<body>
+<header class="app-bar">
+    {% if page.nav-button-kind == 'back' -%}
+    <a href="/" class="flat button   back-to-root-link">{% if page.nav-button-kind == 'back' %}<i class="material-icons    back-to-root-icon">arrow_back</i>{% endif %}</a>
+    <h1 class="title"><span class="title-text">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</span></h1>
+    {%- else -%}
+    <a href="#" class="flat button show-sidebar-button" onclick="return false;"><i class="material-icons">menu</i></a>
+    <a href="/" class="flat button   back-to-root-link"><h1 class="title"><span class="title-text">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</span></h1></a>
+    {%- endif %}
+
+    {%- if page.app-bar.trailing-control.kind == 'link' %}
+    <a href="{{ app-bar-trailing-control-url }}" class="button back-to-root-link">{{ app-bar-trailing-control-icon }}</a>
+    {%- elsif page.app-bar.trailing-control.kind == 'menu' %}
+    Menus not yet supported
+    {%- else %}
+    <span class="layout-placeholder"></span>
+    {%- endif %}
+</header>
+
+
+
+<main id="main" role="main" class="container">
+    {{ content }}
+</main>
+
+
+
+<footer class="centered  widest-desktop-small">
+    <section class="show-print text-centered">
+        {{ site.url }}{{ page.url }}
+    </section>
+
+    <aside class="text-center">
+        {% if page.date.modified %}
+        Last tweaked <time datetime="{{ page.date.modified | date_to_xmlschema }}">{{ page.date.modified | date: "%F (a %A) at %R %Z" }}</time>
+        {% elsif page.date.published %}
+        Created <time datetime="{{ page.date.published | date_to_xmlschema }}">{{ page.date.published | date: "%F (a %A) at %R %Z" }}</time>
+        {% endif %}
+    </aside>
+</footer>
+
+
+
+{% include BlueHuskyStudios/jekyll-components/Sidebar/sidebar.html
+    headerImage_url=site.avatar
+    headerImage_htmlClassNames='avatar'
+%}
+</body>
+</html>
