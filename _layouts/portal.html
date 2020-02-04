@@ -12,7 +12,7 @@ layout: default
             {%- for portalItem in portalSection.items %}
             {%- case portalItem.style | default: 'card' %}
                 {%- when 'card' %}
-                    {% include portal/card-big-button.html
+                    {%- include portal/card-big-button.html
                         title=portalItem.title
                         description=portalItem.description
                         url=portalItem.url
@@ -23,7 +23,7 @@ layout: default
                     %}
 
                 {%- when 'mediumEmphasisButton' %}
-                    {% include portal/medium-emphasis-button.html
+                    {%- include portal/medium-emphasis-button.html
                         title=portalItem.title
                         url=portalItem.url
                         fontAwesomeIcon=portalItem.fontAwesomeIcon
@@ -32,7 +32,7 @@ layout: default
                     %}
 
                 {%- when 'titledLink' %}
-                    {% include portal/titled-link.html
+                    {%- include portal/titled-link.html
                         title=portalItem.title
                         url=portalItem.url
                         display=portalItem.display

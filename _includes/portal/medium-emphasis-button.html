@@ -1,8 +1,10 @@
+
             <li>
                 <a href="{{ include.url }}" {%- if include.openNewTab | default: true %} target="_blank" {%- endif %} class="button medium-emphasis">
                     {%- if include.fontAwesomeIcon -%}
                     <i class="{{ include.fontAwesomeIcon }}"></i>
                     {%- elsif include.materialIcon -%}
                     <i class="material-icons">{{ include.materialIcon }}</i>
-                    {%- endif %} <span>{{ include.title }}</span></a>
+                    {%- endif %}
+                    <span>{{ include.title }}</span></a>
             </li>
