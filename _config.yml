@@ -3,10 +3,10 @@
 #
 
 # Name of your site (displayed in the header)
-name: Ben Leggiero
-title: Ben Leggiero
+name: Ky Leggiero
+title: Ky Leggiero
 author:
-    full-name: Ben Leggiero
+    full-name: Ky Leggiero
     first-name: Ben
     last-name: Leggiero
 
@@ -22,14 +22,14 @@ avatar: https://www.gravatar.com/avatar/2f4691f7a1c9d3192fe843a164a27535?s=300px
 
 # Includes an icon in the footer for each username you enter
 social:
-    default-username: BenLeggiero
-    email: BenLeggiero@Gmail.com
-    github: BenLeggiero/BenLeggiero.me
-    twitter: BenLeggiero
+    default-username: KyLeggiero
+    email: KyLeggiero@Gmail.com
+    github: KyLeggiero/KyLeggiero.me
+    twitter: KyLeggiero
     stackoverflow: users/3939277/ben-leggiero
     mastodon:
         instance: mastodon.social
-        username: BenLeggiero
+        username: KyLeggiero
 
 theme-color: "#21043C"
 
@@ -43,7 +43,7 @@ google_analytics: #UA-123332868-1
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: https://BenLeggiero.me
+url: https://KyLeggiero.me
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
