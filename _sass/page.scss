@@ -3,4 +3,9 @@
     p {
         margin-block-start: 1em;
     }
+
+    .hero {
+        background-color: var(--theme-accent-color);
+        color: var(--theme-text-on-accent-color-color);
+    }
 }
