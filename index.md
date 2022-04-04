@@ -3,6 +3,7 @@ layout: portal
 
 date:
     published: 2020-02-03 23:45 MT
+    modified: 2022-04-04 11:00 -0600
 page-specific-stylesheets:
     - portal.css
 
@@ -24,9 +25,9 @@ portal:
                     thumbnailUrl: https://resume.kyleggiero.me/img/Social-Preview.png
                 -
                     style: card
-                    title: Calendar
-                    description: My availability schedule which is always accurate
-                    url: /Calendar
+                    title: Scheduling
+                    description: View my availability & schedule meetings with me
+                    url: /Scheduling
                     thumbnailUrl-light: /images/Portal-Thumbnails/Calendar/Light Mode.svg
                     thumbnailUrl-dark: /images/Portal-Thumbnails/Calendar/Dark Mode.svg
                     openNewTab: false
