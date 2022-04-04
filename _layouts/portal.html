@@ -8,7 +8,7 @@ layout: default
         {%- if portalSection.title %}
         <h1>{{ portalSection.title }}</h1>
         {% endif %}
-        <ol class="figure-cards   flex-row flex-wrap flex-horiz-space-around">
+        <ol class="figure-cards   flex-row flex-wrap flex-horiz-{{ portalSection.flex-horiz | default: 'space-around' }}">
             {%- for portalItem in portalSection.items %}
             {%- case portalItem.style | default: 'card' %}
                 {%- when 'card' %}
