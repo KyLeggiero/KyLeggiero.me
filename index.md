@@ -46,6 +46,7 @@ portal:
         -
             title: Social
             id: Social
+            flex-horiz: center
             items:
                 -
                     style: mediumEmphasisButton
@@ -60,31 +61,23 @@ portal:
                 -
                     style: mediumEmphasisButton
                     title: LinkedIn
-                    url: https://LinkedIn.com/in/ben-leggiero
+                    url: https://LinkedIn.com/in/ky-leggiero
                     fontAwesomeIcon: fab fa-linkedin
         -
             title: Contact
             id: Contact
+            flex-horiz: center
             items:
                 -
                     style: titledLink
                     title: eMail
                     note: Feel free to send me eMails!
-                    display: KyLeggiero<wbr/>@Gmail.com
-                    url: mailto:KyLeggiero@Gmail.com
+                    display: Ky<wbr/>@KyLeggiero.me
+                    url: mailto:Ky@KyLeggiero.me
                     materialIcon: email
                 -
                     style: titledLink
                     title: Phone Number
-                    note: Only call me if it's time-sensitive;<br/>otherwise I prefer eMail or Telegram
-                    display: +1 (470) BEN C LEG <small class="inline-block">(236-2534)</small>
-                    url: tel:14702362534
+                    note: Contact me via eMail first 🙂
                     materialIcon: phone
-                -
-                    style: titledLink
-                    title: Telegram
-                    note: Feel free to chat with me on Telegram!
-                    display: "@KyLeggiero"
-                    url: https://t.me/KyLeggiero
-                    fontAwesomeIcon: fab fa-telegram-plane
 ---
