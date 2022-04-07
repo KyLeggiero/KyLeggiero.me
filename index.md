@@ -4,8 +4,9 @@ layout: portal
 date:
     published: 2020-02-03 23:45 MT
     modified: 2022-04-04 11:00 -0600
+
 page-specific-stylesheets:
-    - portal.css
+    - /styles/portal.css
 
 nav-button-kind: 'sidebar'
 app-bar:
