@@ -3,7 +3,8 @@ layout: page
 title: Ky's Calendar
 date:
     published: 2019-06-08 03:09 MT
-    modified: 2022-04-04 11:00 -0600
+    modified: 2022-04-07 14:05 -0600
+
 redirect_from:
     - /calendar
     - /cal
@@ -17,22 +18,13 @@ redirect_from:
 
 
 nav-button-kind: back
+
+
+page-specific-stylesheets:
+    - /styles/calendar.css
 ---
 
 <style>
-#calendar {
-    padding: 1em;
-    background: #FFF;
-    border-radius: 1em;
-    box-shadow: var(--box-shadow-z12);
-    margin: 0 2em 2em;
-}
-
-
-:not(.wide-table-holder-holder)>.wide-table-holder[data-wide-table-holder-text]::after {
-    content: attr(data-wide-table-holder-text);
-    padding: 0 1ex;
-}
 </style>
 <section class="flex-column flex-horiz-center   wide-table-holder" data-wide-table-holder-text="If the calendar is cut off, scroll left and right">
     <iframe id="calendar" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FDenver&amp;src=YmVubGVnZ2llcm9AZ21haWwuY29t&amp;src=amp1Ym9rZDVmb2hiZW9mMXE4a2tlYzFxOWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ajNpdnJnaWRqMGFzaGs4ZjEzcTRtMDcyMzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=OWJ0aDdwNmk5cGFqdGs4MGlmYW1rcjRkNmtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%233F51B5&amp;color=%230B8043&amp;color=%23795548&amp;color=%23a8a8a8&amp;mode=WEEK&amp;showTabs=1&amp;showTitle=0" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>

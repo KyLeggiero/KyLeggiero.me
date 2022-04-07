@@ -1,0 +1,22 @@
+---
+---
+
+.calendly-inline-widget {
+    min-height: 100vh !important; // Get rid of unnecessary scrolling in this widget
+}
+
+
+
+#calendar {
+    padding: 1em;
+    background: #FFF;
+    border-radius: 1em;
+    box-shadow: var(--box-shadow-z12);
+    margin: 0 2em 2em;
+}
+
+
+:not(.wide-table-holder-holder)>.wide-table-holder[data-wide-table-holder-text]::after {
+    content: attr(data-wide-table-holder-text);
+    padding: 0 1ex;
+}
