@@ -23,7 +23,9 @@ avatar: https://www.gravatar.com/avatar/2f4691f7a1c9d3192fe843a164a27535?s=300px
 # Includes icons & links in the sidebar
 social:
     default-username: KyLeggiero
-    email: KyLeggiero@Gmail.com
+    email: Howdy@KyLeggiero.me
+    calendar-email: Scheduling@KyLeggiero.me
+    bug-report-email: bug-report@KyLeggiero.me
     github: KyLeggiero/KyLeggiero.me
     twitter: KyLeggiero
     stackoverflow: users/453435/ky

@@ -3,7 +3,7 @@ layout: portal
 
 date:
     published: 2020-02-03 23:45 MT
-    modified: 2022-04-04 11:00 -0600
+    modified: 2024-03-22 17:00 MT
 
 page-specific-stylesheets:
     - /styles/portal.css
@@ -57,9 +57,9 @@ portal:
                     fontAwesomeIcon: fab fa-mastodon
                 -
                     style: mediumEmphasisButton
-                    title: Twitter
-                    url: https://Twitter.com/KyLeggiero
-                    fontAwesomeIcon: fab fa-twitter
+                    title: Telegram
+                    url: https://t.me/KyLeggiero
+                    fontAwesomeIcon: fab fa-telegram
                 -
                     style: mediumEmphasisButton
                     title: LinkedIn
@@ -73,13 +73,15 @@ portal:
                 -
                     style: titledLink
                     title: eMail
-                    note: Feel free to send me eMails!
-                    display: Ky<wbr/>@KyLeggiero.me
-                    url: mailto:Ky@KyLeggiero.me
+                    note: Send me all the eMails you wanna!
+                    display: Howdy<wbr/>@KyLeggiero.me
+                    url: mailto:Howdy@KyLeggiero.me
                     materialIcon: email
                 -
                     style: titledLink
                     title: Phone Number
-                    note: Contact me via eMail first 🙂
+                    note: Feel free to <a href="/Scheduling">schedule a call with me any time!</a>
+                    display: Schedule a call
+                    url: /Scheduling
                     materialIcon: phone
 ---

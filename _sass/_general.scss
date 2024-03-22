@@ -23,3 +23,24 @@ h1,
 h2 {
     text-align: center;
 }
+
+
+
+p.tip {
+    padding: 1em;
+    border-color: var(--theme-accent-color);
+
+    &::before {
+        content: "try";
+        font-family: "Material Icons";
+        line-height: 0;
+        padding-right: 2ex;
+        font-size: 15pt;
+        vertical-align: middle;
+    }
+
+    &:not(.card) {
+        margin: var(--card-margin);
+        border: var(--card-border-width) solid transparent;
+    }
+}

@@ -1,5 +1,8 @@
 
 .page {
+    margin-inline: auto;
+    max-width: var(--desktop-large-min-width);
+
     p {
         margin-block-start: 1em;
     }

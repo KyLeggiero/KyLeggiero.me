@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/bin/zsh
+
+rm -r ./_site/
 
 bundle check
 bundleCheckStatus=$?

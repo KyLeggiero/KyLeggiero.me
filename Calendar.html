@@ -3,18 +3,32 @@ layout: page
 title: Ky's Calendar
 date:
     published: 2019-06-08 03:09 MT
-    modified: 2022-04-07 14:05 -0600
+    modified: 2024-03-22 17:00 MT
 
 redirect_from:
-    - /calendar
-    - /cal
-    - /Cal
-    - /schedule
-    - /Schedule
-    - /scheduling
-    - /Scheduling
     - /availability
     - /Availability
+    - /cal
+    - /Cal
+    - /calendar
+    - /calendly
+    - /Calendly
+    - /call
+    - /Call
+    - /meet
+    - /Meet
+    - /meetup
+    - /Meetup
+    - /schedule
+    - /Schedule
+    - /scheduler
+    - /Scheduler
+    - /scheduling
+    - /Scheduling
+    - /syncup
+    - /Syncup
+    - /talk
+    - /Talk
 
 
 nav-button-kind: back
@@ -24,26 +38,62 @@ page-specific-stylesheets:
     - /styles/calendar.css
 ---
 
-<style>
-</style>
+<section>
+    <h1 id="Add-Event">Add an event to {% if site.author.first-name -%} {{ site.author.first-name }}ʼs {%- else -%} this {%- endif %} calendar</h1>
+
+    <p>
+        Simply use the Calendly widget below 
+        {%- if site.social.calendar-email -%}
+        , or send a calendar invite to
+        <a href="mailto:{{ site.social.calendar-email }}" target="_blank">{{ site.social.calendar-email }}</a>,
+        {%- endif %}
+        and it'll show up on my calendar as "Busy". I'll get a notification letting me know you've blocked out some
+        time, and I'll reach out to you if needed.
+    </p>
+    <p>
+        After it's automatically put on my calendar, I'll then be able to accept it, decline it, or propose a new
+        time. If you're using Google Calendar, my response may be reflected on your calendar as well. Otherwise, check
+        your email for a response from
+        {%- if site.social.calendar-email %}
+        <strong>{{ site.social.calendar-email }}</strong>
+        {%- else %}
+        me
+        {%- endif -%}.
+    </p>
+
+    <p class="tip card" data-tip-icon="calendar_month"><strong>Scroll down past this scheduling widget to view my full calendar</strong> (auto-updating)</p>
+
+    <!-- Calendly inline widget begin -->
+    <div class="calendly-inline-widget" data-url="https://calendly.com/kyleggiero?background_color=fafafa&text_color=212121&primary_color={{ site.theme-color | remove_first: '#' | downcase }}" style="min-width:320px;height:1024px;position:relative;">
+        <p id="calendly-not-working-tip" class="tip fade-in-after-a-few-seconds" data-tip-icon="bug_report" style="position: absolute; top: 0;">Is this widget not working? Please <a href="mailto:{{ site.social.bug-report-email }}">let me know</a> and <a href="https://calendly.com/kyleggiero">use my Calendly directly instead</a></p>
+    </div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <!-- Calendly inline widget end -->
+</section>
+
 <section class="flex-column flex-horiz-center   wide-table-holder" data-wide-table-holder-text="If the calendar is cut off, scroll left and right">
     <iframe id="calendar" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FDenver&amp;src=YmVubGVnZ2llcm9AZ21haWwuY29t&amp;src=amp1Ym9rZDVmb2hiZW9mMXE4a2tlYzFxOWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ajNpdnJnaWRqMGFzaGs4ZjEzcTRtMDcyMzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=OWJ0aDdwNmk5cGFqdGs4MGlmYW1rcjRkNmtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%233F51B5&amp;color=%230B8043&amp;color=%23795548&amp;color=%23a8a8a8&amp;mode=WEEK&amp;showTabs=1&amp;showTitle=0" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 </section>
 
-<section>
-    <h1 id="Add-Event">Add an event to this calendar:</h1>
-    <!-- Calendly inline widget begin -->
-    <div class="calendly-inline-widget" data-url="https://calendly.com/kyleggiero?background_color=fafafa&text_color=212121&primary_color={{ site.theme-color | remove_first: '#' | downcase }}" style="min-width:320px;height:630px;"></div>
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    <!-- Calendly inline widget end -->
 
-    <!-- <p>
-        Simply send a calendar invite to <a href="mailto:KyLeggiero@Gmail.com" target="_blank">KyLeggiero@Gmail.com</a>
-        and it will show up here as "Busy". I will get a notification letting me know you've blocked out some time.
-    </p>
-    <p>
-        After it's automatically put on my calendar, I will then be able to accept it, decline it, or propose a new
-        time. If you are using Google Calendar, my response may be reflected on your calendar as well. Otherwise, check
-        your email for a response from <strong>KyLeggiero@Gmail.com</strong>.
-    </p> -->
-</section>
+<script>
+const MutationObserver = window.MutationObserver || window.WebKitMutationObserver
+const mutationObserver = new MutationObserver(mutationHandler)
+
+
+//--- Add a target node to the observer. Can only add one node at a time.
+$(".calendly-inline-widget").each((_, element) => {
+  mutationObserver.observe(element, { attributes: true })
+})
+
+function mutationHandler(mutationRecords) {
+  console.info("mutationHandler:")
+
+  mutationRecords.forEach(mutation => {
+    if (!!mutation.target.dataset.processed) {
+        $(".calendly-inline-widget #calendly-not-working-tip").remove()
+        mutationObserver.disconnect()
+    }
+  })
+}
+</script>
