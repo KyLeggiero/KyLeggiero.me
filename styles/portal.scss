@@ -1,11 +1,38 @@
 ---
 ---
 
-.app-bar {
-    --font-family-title: "Questrial", "Roboto", var(--font-family-primary, sans-serif), sans-serif;
-    --font-size-title: 2em;
-
-    .button .title {
-        text-transform: none;
+.portal {
+    .figure-card {
+        &.inline {
+            --button-resting-shadow: var(--box-shadow-z6);
+            --button-hover-shadow: var(--box-shadow-z24);
+            
+            padding: 0;
+            
+            figure {
+                display: flex;
+                
+                .figure-card-thumbnail {
+                    max-height: var(--inline-figure-card-thumbnail-max-height);
+                    width: var(--inline-figure-card-thumbnail-max-width);
+                }
+                
+                .figure-card-title {
+                    font-size: var(--font-size-h4);
+                }
+                
+                figcaption {
+                    //flex: unset;
+                }
+            }
+            
+            
+            @at-root
+            :root {
+                --inline-figure-card-thumbnail-square-size: 3cm;
+                --inline-figure-card-thumbnail-max-height: var(--inline-figure-card-thumbnail-square-size);
+                --inline-figure-card-thumbnail-max-width: var(--inline-figure-card-thumbnail-square-size);
+            }
+        }
     }
 }

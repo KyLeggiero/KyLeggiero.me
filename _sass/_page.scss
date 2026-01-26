@@ -3,7 +3,7 @@
     margin-inline: auto;
     max-width: var(--desktop-large-min-width);
 
-    p {
+    p:not(:first-of-type) {
         margin-block-start: 1em;
     }
 

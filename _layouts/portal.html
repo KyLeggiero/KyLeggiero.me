@@ -1,6 +1,11 @@
 ---
-layout: default
+layout: page
+
+layout-specific-stylesheets:
+- /styles/portal.css
 ---
+
+{{ content }}
 
 <nav class="portal">
     {% for portalSection in page.portal.sections %}
@@ -13,6 +18,7 @@ layout: default
             {%- case portalItem.style | default: 'card' %}
                 {%- when 'card' %}
                     {%- include portal/card-big-button.html
+                        buttonSize=portalItem.buttonSize
                         title=portalItem.title
                         description=portalItem.description
                         url=portalItem.url
@@ -51,5 +57,3 @@ layout: default
     </section>
     {% endfor %}
 </nav>
-
-{{ content }}
