@@ -1,12 +1,9 @@
 ---
-layout: portal
+layout: homepage
 
 date:
     published: 2020-02-03 23:45 MT
     modified: 2024-03-22 17:00 MT
-
-page-specific-stylesheets:
-    - /styles/portal.css
 
 nav-button-kind: 'sidebar'
 app-bar:
@@ -54,7 +51,7 @@ portal:
                     style: button
                     buttonClass: low-emphasis
                     title: GitHub
-                    url: https://GitHub.com/KyLeggiero
+                    url: /GitHub
                     fontAwesomeIcon: fab fa-github
                 -
                     style: button
